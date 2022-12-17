@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Барбершоп "Бородинский"</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <!--Header-->
@@ -47,7 +48,8 @@
     <!--Основной контент-->
     <main class="main-index">
       <h1 class="visually-hidden">Барбершоп "Бородинский"</h1>
-      <img class="logo" src="" alt="Логотип Барбершопа" />
+      <!--Размеры изображения указываются, чтобы зарезервировать для него место-->
+      <img class="logo" src="images/logo-full-dark.svg" width="367" height="152" alt="Логотип Барбершопа" />
       <!--Преимущества-->
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
@@ -75,9 +77,11 @@
           </li>
         </ul>
       </section>
+      <!--Див - объединит две секции в блок для их расположения-->
+      <div class="index-columns">
       <!--Услуги-->
       <section class="services">
-        <h2 class="visually-hidden">Популярные услуги</h2>
+        <h2 class="services-title">Популярные услуги</h2>
         <ul class="services-list">
           <li class="services-item">
             <span class="services-name">Стрижка машинкой</span>
@@ -97,52 +101,53 @@
           </li>
         </ul>
         <a class="button button-all" href="#">Посмотреть все</a>
-      </section>
-      <!--Галерея-->
-      <section class="gallery">
-        <h2 class="gallery-title">Фотогалерея</h2>
-        <img class="slider-image" src="" alt="Примеры работ" />
-        <button class="slider-button slider-prev" type="button">
-          <span class="visually-hidden">Предыдущее фото</span>
-        </button>
-        <button class="slider-button slider-next" type="button">
-          <span class="visually-hidden">Следующее фото</span>
-        </button>
-        <ol class="slider-pagination">
-          <li class="slider-pagination-item">
-            <button
-              class="slider-pagination-button slider-pagination-button-current"
-              type="button"
-            >
-              <span class="visually-hidden">1 фото</span>
-            </button>
-          </li>
-          <li class="slider-pagination-item">
-            <button
-              class="slider-pagination-button slider-pagination-button-current"
-              type="button"
-            >
-              <span class="visually-hidden">2 фото</span>
-            </button>
-          </li>
-          <li class="slider-pagination-item">
-            <button
-              class="slider-pagination-button slider-pagination-button-current"
-              type="button"
-            >
-              <span class="visually-hidden">3 фото</span>
-            </button>
-          </li>
-          <li class="slider-pagination-item">
-            <button
-              class="slider-pagination-button slider-pagination-button-current"
-              type="button"
-            >
-              <span class="visually-hidden">4 фото</span>
-            </button>
-          </li>
-        </ol>
-      </section>
+        </section>
+        <!--Галерея-->
+        <section class="gallery">
+          <h2 class="gallery-title">Фотогалерея</h2>
+          <img class="slider-image" src="/images/gallery-1.jpg" width="390" height="250" alt="Примеры работ" />
+          <button class="slider-button slider-prev" type="button">
+            <span class="visually-hidden">Предыдущее фото</span>
+          </button>
+          <button class="slider-button slider-next" type="button">
+            <span class="visually-hidden">Следующее фото</span>
+          </button>
+          <ol class="slider-pagination">
+            <li class="slider-pagination-item">
+              <button
+                class="slider-pagination-button slider-pagination-button-current"
+                type="button"
+              >
+                <span class="visually-hidden">1 фото</span>
+              </button>
+            </li>
+            <li class="slider-pagination-item">
+              <button
+                class="slider-pagination-button slider-pagination-button-current"
+                type="button"
+              >
+                <span class="visually-hidden">2 фото</span>
+              </button>
+            </li>
+            <li class="slider-pagination-item">
+              <button
+                class="slider-pagination-button slider-pagination-button-current"
+                type="button"
+              >
+                <span class="visually-hidden">3 фото</span>
+              </button>
+            </li>
+            <li class="slider-pagination-item">
+              <button
+                class="slider-pagination-button slider-pagination-button-current"
+                type="button"
+              >
+                <span class="visually-hidden">4 фото</span>
+              </button>
+            </li>
+          </ol>
+        </section>
+      </div>
       <!--Контакты-->
       <section class="contacts">
         <h2 class="contacts-title">Контакты</h2>
@@ -237,7 +242,7 @@
     <footer class="page-footer">
       <section class="footer-contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <img class="footer-contacts-logo" src="" alt="Логотип Барбершопа" />
+        <img class="footer-contacts-logo" src="/images/logo-short-light.svg" width="187" height="24" alt="Логотип Барбершопа" />
         <address class="footer-contacts-address">
           <p class="about-text">
             Санкт-Петербург, набережная реки Карповки, 5, литера П.

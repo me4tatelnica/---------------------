@@ -1,0 +1,308 @@
+/* Подключаем шрифты */
+@font-face {
+  font-family: "PT Sans Narrow";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/PT_Sans-Narrow-Web-Regular.woff2);
+  font-display: swap; /* Как будут отображаться шрифты */
+}
+
+@font-face {
+  font-family: "PT Sans Narrow";
+  font-style: bold;
+  font-weight: 700;
+  src: url(../fonts/PT_Sans-Narrow-Web-Bold.woff2);
+  font-display: swap; /* Как будут отображаться шрифты */
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/PTSansRegular.woff2);
+  font-display: swap; /* Как будут отображаться шрифты */
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(../fonts/PTSansItalic.woff2);
+  font-display: swap; /* Как будут отображаться шрифты */
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: bold;
+  font-weight: 700;
+  src: url(../fonts/PTSansBold.woff2);
+  font-display: swap; /* Как будут отображаться шрифты */
+}
+
+/* Обращаемся к шрифтам - даем основной шрифт */
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #242424;
+  background-color: #fbf7f4;
+}
+
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+/*Header*/
+.page-header {
+  color: #fff;
+  background-color: #000;
+}
+
+/*Navigation*/
+.navigation-link {
+  font-family: "PT Sans Narrow", serif;
+  line-height: 22px;
+  color: #fff;
+  background-color: #000;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none; /*Убираем подчеркивание у ссылки*/
+  text-transform: uppercase;
+}
+
+/*Main*/
+.main-index {
+  color: #fff;
+  background-color: #000;
+  background-image: url("../images/bcg-header.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+/* List */
+.advantages-list {
+  text-align: center;
+}
+
+/* Title */
+.advantages-title {
+  font-family: PT-Sans Narrow, sans-serif;
+  font-size: 32px;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+
+/* Index columns */
+.index-columns {
+  color: #242424;
+  background-color: #fbf7f4;
+  background-image: url("../images/bg-noisy.png");
+}
+
+/* Services */
+
+.services {
+  text-transform: uppercase;
+}
+
+/* Title */
+.services-title,
+.gallery-title,
+.contacts-title,
+.appointment-title {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Price */
+.services-list {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.services-price {
+  color: #af7842;
+}
+
+.contacts-address {
+  font-style: normal;
+}
+
+/* Subtitle */
+.contacts-subtitle {
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #af7842;
+}
+
+/* Phone */
+.contacts-phone {
+  font-size: 24px;
+  line-height: 29px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #242424;;
+}
+
+/* List */
+.appointment-form {
+  color: #595959;
+}
+
+/* Label */
+.form-label {
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.page-footer {
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #242424;
+  background-image: url("images/bg-noisy.png");
+  background-repeat: repeat;
+}
+
+.page-footer a {
+  color: #FFFFFF;
+}
+
+.page-footer .htmlacademy-link {
+  font-size: 14px;
+  color: #DBB590;
+}
+
+.page-footer-title {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.footer-contacts-address {
+  font-style: normal;
+}
+
+.footer-contacts-address p {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.footer-contacts-address-phone {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.footer-contacts-map-link {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.inner-header-title {
+  font-size: 32px;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  color: #242424;
+}
+
+/* Link */
+.breadcrumbs-link {
+  color: inherit;
+}
+/* Title */
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #242424;
+  text-transform: uppercase;
+}
+
+/* Label */
+.control-label {
+  font-weight: 700;
+}
+
+.sorting-container {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+/* Item */
+.product-card {
+  background-color: #FFFFFF;
+}
+
+/* Link */
+.product-card-link {
+  text-decoration: none;
+}
+
+/* Title */
+.product-card-title {
+  font-weight: 700;
+  color: #242424;
+}
+
+/* Price */
+.product-card-price {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  color: #814B18;
+  text-transform: uppercase;
+}
+
+/* Link */
+.pagination {
+  background-color: #FFFFFF;
+}
+
+.pagination-link {
+  color: #FFFFFF;
+  background-color: #000000;
+  text-decoration: none;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.pagination-current {
+  color: #242424;
+  background-color: #FFFFFF;
+}
+
+.pagination-disabled {
+  background-color: #595959;
+}
