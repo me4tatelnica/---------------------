@@ -1,128 +1,240 @@
-/* Подключаем шрифты */
 @font-face {
-  font-family: "PT Sans Narrow";
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/PT_Sans-Narrow-Web-Regular.woff2);
-  font-display: swap; /* Как будут отображаться шрифты */
-}
-
-@font-face {
-  font-family: "PT Sans Narrow";
-  font-style: bold;
-  font-weight: 700;
-  src: url(../fonts/PT_Sans-Narrow-Web-Bold.woff2);
-  font-display: swap; /* Как будут отображаться шрифты */
+  src: url("fonts/pt-sans-regular.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/PTSansRegular.woff2);
-  font-display: swap; /* Как будут отображаться шрифты */
+  font-weight: 700;
+  src: url("../fonts/pt-sans-bold.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "PT Sans";
   font-style: italic;
   font-weight: 400;
-  src: url(../fonts/PTSansItalic.woff2);
-  font-display: swap; /* Как будут отображаться шрифты */
+  src: url("../fonts/pt-sans-italic.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "PT Sans";
-  font-style: bold;
+  font-style: italic;
   font-weight: 700;
-  src: url(../fonts/PTSansBold.woff2);
-  font-display: swap; /* Как будут отображаться шрифты */
+  src: url("../fonts/pt-sans-bold-italic.woff2") format("woff2");
+  font-display: swap;
 }
 
-/* Обращаемся к шрифтам - даем основной шрифт */
+/* PT Sans Narrow */
+@font-face {
+  font-family: "PT Sans Narrow";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/pt-sans-narrow-bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #242424;
-  background-color: #fbf7f4;
+  background-color: #FBF7F4;
 }
 
+/* Скрыть текст визуально*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  bottom: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Button */
 .button {
   font-family: inherit;
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;
   text-align: center;
-  color: #fff;
-  background-color: #000;
+  color: #FFFFFF;
+  background-color: #000000;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-
-/*Header*/
-.page-header {
-  color: #fff;
-  background-color: #000;
+/* Light */
+.button-light,
+.button-current {
+  color: #242424;
+  background-color: #FFFFFF;
 }
 
-/*Navigation*/
+/* Pages */
+
+.page-header {
+  color: #FFFFFF;
+  background-color: #000000;
+}
+
+.navigation {
+  display: flex;
+  width: 940px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 470px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .navigation-link {
-  font-family: "PT Sans Narrow", serif;
+  display: block;
+  padding: 24px 19px;
+  font-family: "PT Sans Narrow", sans-serif;
   line-height: 22px;
-  color: #fff;
-  background-color: #000;
   font-weight: 700;
   text-align: center;
-  text-decoration: none; /*Убираем подчеркивание у ссылки*/
+  color: #FFFFFF;
+  background-color: #000000;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
-/*Main*/
+.navigation-logo {
+  width: 140px;
+  margin-right: 100px;
+}
+
+.navigation-user {
+  max-width: 250px;
+  margin-left: auto;
+}
+
+.navigation-user .navigation-link {
+  min-width: 16px;
+  min-height: 22px;
+}
+
+.main-container {
+  flex-grow: 1;
+  padding-top: 64px;
+  padding-bottom: 60px;
+}
+
 .main-index {
-  color: #fff;
-  background-color: #000;
-  background-image: url("../images/bcg-header.jpg");
+  color: #FFFFFF;
+  background-color: #000000;
+  background-image: url("../images/index-bg.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
 
+.main-inner {
+  padding-top: 40px;
+  color: #242424;
+  background-color: #FBF7F4;
+  background-image: url("../images/bg-noisy.png");
+}
+
+.page-container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 64px;
+}
+
+/* Advantages */
+.advantages {
+  margin-bottom: 58px;
+
+}
+
 /* List */
 .advantages-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
   text-align: center;
+  list-style-type: none;
+  color: #FFFFFF;
+}
+
+/* Item */
+.advantages-item {
+  width: 277px;
 }
 
 /* Title */
 .advantages-title {
-  font-family: PT-Sans Narrow, sans-serif;
+  margin-top: 0;
+  margin-bottom: 56px;
+  font-family: "PT Sans Narrow", sans-serif;
   font-size: 32px;
   line-height: 35px;
   text-transform: uppercase;
+}
+
+/* Description */
+.advantages-description {
+  margin: 0;
+
 }
 
 /* Index columns */
 .index-columns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  padding: 40px;
   color: #242424;
-  background-color: #fbf7f4;
-  background-image: url("../images/bg-noisy.png");
+  background-color: #FBF7F4;
+  background-image: url("images/bg-noisy.png");
 }
 
-/* Services */
+.index-columns:last-child {
+  margin-bottom: 0;
+}
+
+/* Services*/
 
 .services {
+  width: 390px;
   text-transform: uppercase;
 }
 
 /* Title */
-.services-title,
-.gallery-title,
-.contacts-title,
-.appointment-title {
+.services-title {
+  margin-top: 0;
+  margin-bottom: 28px;
   font-size: 32px;
   line-height: 35px;
   font-weight: 700;
-  text-transform: uppercase;
 }
 
 /* Price */
@@ -133,7 +245,36 @@ body {
 }
 
 .services-price {
-  color: #af7842;
+  color: #AF7842;
+}
+
+.gallery {
+  width: 390px;
+}
+
+/* Title */
+.gallery-title {
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contacts {
+  width: 350px;
+  font-weight: 700;
+}
+
+/* Title */
+.contacts-title {
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .contacts-address {
@@ -145,20 +286,34 @@ body {
   font-size: 20px;
   line-height: 28px;
   text-transform: uppercase;
-  color: #af7842;
+  color: #AF7842;
 }
 
 /* Phone */
 .contacts-phone {
   font-size: 24px;
   line-height: 29px;
-  text-decoration: none;
+  text-decoration-line: underline;
   text-transform: uppercase;
-  color: #242424;;
+  color: #242424;
+}
+
+.appointment {
+  width: 430px;
+}
+
+/* Title */
+.appointment-title {
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 /* List */
-.appointment-form {
+.appointment-info {
   color: #595959;
 }
 
@@ -188,12 +343,26 @@ body {
 }
 
 .page-footer-title {
+  margin-top: 0;
+  margin-bottom: 14px;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 20px;
   line-height: 28px;
   font-weight: 700;
   color: #FFFFFF;
   text-transform: uppercase;
+}
+
+.page-footer-container {
+  display: flex;
+  width: 940px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.footer-contacts {
+  width: 200px;
+  margin-right: 130px;
 }
 
 .footer-contacts-address {
@@ -226,7 +395,33 @@ body {
   text-transform: uppercase;
 }
 
+.footer-social {
+  margin-left: auto;
+  max-width: 190px;
+}
+
+.footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer-social-item {
+  width: 56px;
+  height: 44px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.footer-social-item:nth-child(3n) {
+  margin-right: 0;
+}
+
 .inner-header-title {
+  margin-top: 0;
+  margin-bottom: 16px;
   font-size: 32px;
   line-height: 35px;
   text-transform: uppercase;
@@ -234,13 +429,31 @@ body {
 
 /* Breadcrumbs */
 .breadcrumbs {
+  display: flex;
+  margin: 0;
+  padding: 0;
   color: #242424;
+  list-style-type: none;
 }
 
 /* Link */
 .breadcrumbs-link {
+  margin-right: 32px;
   color: inherit;
 }
+
+.catalog-products {
+  display: flex;
+}
+
+.catalog-filter {
+  width: 220px;
+  margin-right: 20px;
+}
+.catalog-right-column {
+  width: 700px;
+}
+
 /* Title */
 .catalog-filter-title {
   font-size: 20px;
@@ -256,9 +469,28 @@ body {
 }
 
 .sorting-container {
+  display: flex;
+  margin-bottom: 16px;
+  padding: 16px;
   color: #000000;
   background-color: #FFFFFF;
 }
+
+.sorting-type {
+  margin-right: auto;
+}
+
+.sorting-container .button {
+  width: 56px;
+  height: 44px;
+}
+
+.product-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 
 /* Item */
 .product-card {
@@ -269,6 +501,8 @@ body {
 .product-card-link {
   text-decoration: none;
 }
+
+
 
 /* Title */
 .product-card-title {
@@ -285,17 +519,51 @@ body {
   text-transform: uppercase;
 }
 
-/* Link */
-.pagination {
+/* Pagination */
+
+.pagination-container {
+  display: flex;
+  padding: 16px;
   background-color: #FFFFFF;
 }
 
+/* Link */
+
 .pagination-link {
+  display: block;
+  box-sizing: border-box;
+  width: 50px;
+  height: 44px;
+  padding: 14px 20px;
+  line-height: 16px;
+  font-weight: 700;
   color: #FFFFFF;
   background-color: #000000;
   text-decoration: none;
-  line-height: 16px;
-  font-weight: 700;
+}
+
+
+
+.pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: #FFFFFF;
+}
+
+pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* Without background */
+.pagination-clear {
+  background-color: transparent;
+}
+
+/* Show more */
+.pagination-show-more {
+  margin-left: auto;
 }
 
 .pagination-current {
@@ -306,3 +574,5 @@ body {
 .pagination-disabled {
   background-color: #595959;
 }
+
+
