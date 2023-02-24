@@ -76,7 +76,7 @@ body {
   line-height: 16px;
   font-weight: 700;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #000000;
   border: none;
   text-decoration: none;
@@ -88,36 +88,12 @@ body {
 .button-light,
 .button-current {
   color: #242424;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
-.button:hover,
-.footer-social-link:hover {
-  background-color: #814B18;
-}
-
-.button:focus,
-.footer-social-link:focus {
-  outline: 2px solid #DBB590;
-  background-color: #4E2E0E;
-}
-
-.button:disabled {
-  color: #E7E7E7;
-  background-color: #595959;
-}
-
-.button:disabled:hover {
-  background-color: #595959;
-  outline: none;
-  cursor: default;
-}
-
-.button + .button {
-  margin-left: 16px;
-}
-
-.button-all{
+/* Next */
+.button-all,
+.button-next {
   padding-right: 44px;
   background-image: url("../images/arrow-right.svg");
   background-repeat: no-repeat;
@@ -125,21 +101,60 @@ body {
   background-position: center right 20px;
 }
 
-
-
-.button-feedback {
-  color: #242424;
-  background-color: #FFFFFF;
+.button:hover,
+.footer-social-link:hover {
+  background-color: #814b18;
 }
 
-.button-feedback:hover {
-  background-color: #DBB590;
+.button:focus,
+.button:active,
+.footer-social-link:focus
+.footer-social-link:active {
+  outline: 2px solid #dbb590;
+  background-color: #4e2e0e;
 }
 
-.button-feedback:focus {
-  outline: 2px solid #AF7842;
-  background-color: #DBB590;
+.button-disabled,
+.button:disabled,
+.slider-button:disabled {
+  color: #e7e7e7;
+  background-color: #595959;
 }
+
+.button-disabled:focus,
+.button-disabled:hover,
+.button:disabled:hover {
+  background-color: #595959;
+  outline: none;
+  cursor: default;
+}
+
+/* Light */
+.button-feedback,
+.button-feedback:active,
+.button-current,
+.button-current:active {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.button-feedback:hover,
+.button-current:hover {
+  background-color: #dbb590;
+}
+
+.button-feedback:focus,
+.button-current:focus {
+  outline: 2px solid #af7842;
+  background-color: #dbb590;
+}
+
+.button-feedback.button-disabled,
+.button-current.button-disabled {
+  color: #e7e7e7;
+  background-color: #595959;
+}
+
 
 /* Pages */
 
@@ -170,7 +185,7 @@ body {
 .navigation-link {
   position: relative;
   display: block;
-  padding: 24px 19px;
+  padding: 24px 20px;
   font-family: "PT Sans Narrow", sans-serif;
   line-height: 22px;
   font-weight: 700;
@@ -293,8 +308,9 @@ body {
 
 /* List */
 .advantages-list {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  gap: 30px 54.5px;
+  grid-template-columns: 277px 277px 277px;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -322,9 +338,9 @@ body {
   position: absolute;
   bottom: -40px;
   left: 50%;
-  width: 18px;
-  height: 18px;
-  margin-left: -9px;
+  width: 13px;
+  height: 13px;
+  margin-left: -6.5px;
   background-color: #FFFFFF;
   content: "";
   transform: rotate(45deg);
@@ -417,6 +433,7 @@ body {
 .services-price {
   order: 3;
   color: #AF7842;
+  word-spacing: 3px;
 }
 
 .gallery {
@@ -426,7 +443,7 @@ body {
 /* Title */
 .gallery-title {
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 32px;
   line-height: 35px;
@@ -538,6 +555,7 @@ body {
   margin-bottom: 8px;
   font-size: 20px;
   line-height: 28px;
+  font-family: "PT Sans Narrow", sans-serif;
   text-transform: uppercase;
   color: #AF7842;
 }
@@ -564,6 +582,11 @@ body {
 .contacts-navigation {
   margin-top: 21px;
   margin-bottom: 0;
+}
+
+.contacts-navigation .button {
+  margin-right: 13px;
+  margin-bottom: 5px;
 }
 
 .appointment {
@@ -680,6 +703,9 @@ body {
 /* List */
 .appointment-info {
   color: #595959;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 22px;
 }
 
 /* Label */
@@ -780,8 +806,13 @@ body {
   width: 192px;
 }
 
+.newsletter {
+  max-width: 300px;
+}
+
 .newsletter-form {
   display: flex;
+  width: 280px;
 }
 
 .newsletter-button {
@@ -855,6 +886,7 @@ body {
 /* Breadcrumbs */
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   color: #242424;
@@ -875,7 +907,7 @@ body {
 
 .breadcrumbs-item::after {
   position: absolute;
-  top: 10px;
+  top: 7px;
   right: -20px;
   width: 8px;
   height: 8px;
@@ -919,10 +951,17 @@ body {
 }
 
 /* Range */
+.range {
+  max-width: 220px;
+  overflow: auto;
+  padding-top: 8px;
+}
+
 .range-scale {
   position: relative;
   height: 4px;
   margin-bottom: 16px;
+
   background-color: #242424;
   border-radius: 2px;
 }
@@ -993,6 +1032,7 @@ body {
   position: relative;
   display: block;
   padding-left: 36px;
+  line-height: 22px;
 }
 
 /* Mark */
@@ -1066,6 +1106,8 @@ body {
 
 .sorting-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   margin-bottom: 16px;
   padding: 16px;
   color: #000000;
@@ -1214,6 +1256,7 @@ body {
   color: #814B18;
   text-transform: uppercase;
   margin-bottom: 16px;
+  letter-spacing: -2px;
 }
 
 /* Pagination */
@@ -1229,8 +1272,8 @@ body {
 .pagination-link {
   display: block;
   box-sizing: border-box;
-  width: 50px;
-  height: 44px;
+  min-width: 50px;
+  min-height: 44px;
   padding: 14px 20px;
   line-height: 16px;
   font-weight: 700;
@@ -1256,6 +1299,11 @@ body {
   background-color: #FFFFFF;
 }
 
+/* Item */
+.pagination-item {
+  margin-bottom: 5px;
+}
+
 .pagination-item:not(:last-child) {
   margin-right: 8px;
 }
@@ -1268,6 +1316,7 @@ body {
 /* Show more */
 .pagination-show-more {
   margin-left: auto;
+  max-width: 170px;
 }
 
 .pagination-current {
@@ -1285,6 +1334,8 @@ body {
   background-position: center;
   background-size: 16px 16px;
   background-repeat: no-repeat;
+  padding-left: 40px;
+  padding-right: 18px;
 }
 
 .pagination-next {
@@ -1292,6 +1343,8 @@ body {
   background-position: center;
   background-size: 16px 16px;
   background-repeat: no-repeat;
+  padding-left: 40px;
+  padding-right: 18px;
 }
 
 
@@ -1475,10 +1528,6 @@ body {
 .auth-form-button {
   width: 360px;
   margin-bottom: 16px;
-}
-
-.auth-form .button + .button {
-  margin: 0;
 }
 
 .auth-form-register {
